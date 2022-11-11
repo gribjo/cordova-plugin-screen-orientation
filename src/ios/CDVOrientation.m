@@ -85,7 +85,8 @@
                         [self.viewController setNeedsUpdateOfSupportedInterfaceOrientations];
                     #endif
                 } else {
-                    [UINavigationController attemptRotationToDeviceOrientation];
+                    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+                    //[UINavigationController attemptRotationToDeviceOrientation];
                 }
             } else {
                 _isLocked = false;
